@@ -21,7 +21,7 @@ Open a terminal and run:
 
 Open a terminal and run:
 
-    bash <(curl -sL https://raw.github.com/adrfer/bash-oh-my/master/uninstall.sh) && . ~/.bash_profile
+    bash <(curl -sL https://raw.github.com/adrfer/bash-oh-my/master/uninstall.sh)
 
 --
 Hey, looking for a git profile? Look no further than the [git-oh-my](https://github.com/adrfer/git-oh-my) repo.
