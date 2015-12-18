@@ -15,7 +15,7 @@ To install, open a terminal and run:
 
 Open a terminal and run:
 
-    bash <(curl -sL https://raw.github.com/adrfer/bash-oh-my//master/update.sh)
+    bash <(curl -sL https://raw.github.com/adrfer/bash-oh-my/master/update.sh)
 
 ## Uninstall
 
