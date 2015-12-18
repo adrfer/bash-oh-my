@@ -1,0 +1,60 @@
+clone() {
+  [[ "${#}" = 1 ]] || {
+    echo 'Usage: clone WHATEVER'
+    return 1
+  }
+
+  cp -rf ${1%/}{," copy $(date +%s)"}
+}
+
+jump() {
+  [[ "${#}" = 1 ]] || {
+    echo 'Usage: jump PATH'
+    return 1
+  }
+
+  [[ -n "${1}" ]] && mkdir -p "${1}"
+  cd "${1}"
+}
+
+
+path() {
+  [[ "${#}" = 0 ]] || {
+    echo 'Usage: path'
+    return 1
+  }
+
+  echo -e "${PATH//:/\\n}"
+}
+
+up() {
+  level="${1}"
+  [[ -z "${level}" ]] && level=1
+
+  [[ "${level}" =~ ^[1-9]+$ ]] || {
+    echo 'Usage: up NUMBER'
+    return 1
+  }
+
+  for whatever in $(seq "${level}"); do
+    cd ../
+  done
+}
+
+ip() {
+  [[ "${#}" = 0 ]] || {
+    echo 'Usage: ip'
+    return 1
+  }
+
+  curl -s checkip.dyndns.org | grep -Eo '[0-9\.]+'
+}
+
+exists() {
+  [[ "${#}" = 1 ]] || {
+    echo 'Usage: exist'
+    return 1
+  }
+
+  [[ -x $(command -v "${1}" 2>/dev/null) ]]
+}

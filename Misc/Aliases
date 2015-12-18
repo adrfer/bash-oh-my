@@ -1,0 +1,28 @@
+alias sudo="sudo "
+
+alias ..="cd .."
+alias cd..=".."
+alias home="cd ~"
+alias root="cd /"
+alias back="cd -"
+
+alias ls="ls -FG"
+alias ll="ls -hl"
+alias la="ls -A"
+
+alias cp="cp -iv"
+alias mv="mv -iv"
+alias rm="rm -iv"
+
+alias zap="rm -rf"
+
+alias mkdir="mkdir -pv"
+
+alias df="df -H"
+alias du="du -skh"
+
+alias grep="grep --color=auto"
+
+alias tail="tail -f"
+
+alias quit="exit"

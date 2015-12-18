@@ -1,0 +1,19 @@
+# For more info about `shopt`, open a terminal and run this command:
+#
+#   man 1 bash
+#   /^ *shopt \[
+
+# Correct minor errors in the spelling of a directory component in a cd command
+shopt -s cdspell
+
+# Match filenames in a case-insensitive fashion when performing filename expansion
+shopt -s nocaseglob
+
+# Include filenames beginning with a `.' in the results of filename expansion
+shopt -s dotglob
+
+# Check the window size after each command and updates the values of LINES and COLUMNS, if necessary
+shopt -s checkwinsize
+
+# Append the history list to the file named by the value of the HISTFILE when the shell exits
+shopt -s histappend
