@@ -9,19 +9,19 @@ Code tested in `GNU bash 3.2.57`.
 
 To install, open a terminal and run:
 
-    bash <(curl -sL https://raw.github.com/adrfer/bash-oh-my/master/install.sh) && . ~/.bash_profile
+    bash <(curl -sL https://raw.github.com/adrfer/bash-oh-my/master/install) && . ~/.bash_profile
 
 ### Update
 
 Open a terminal and run:
 
-    bash <(curl -sL https://raw.github.com/adrfer/bash-oh-my/master/update.sh)
+    bash <(curl -sL https://raw.github.com/adrfer/bash-oh-my/master/update)
 
 ### Uninstall
 
 Open a terminal and run:
 
-    bash <(curl -sL https://raw.github.com/adrfer/bash-oh-my/master/uninstall.sh)
+    bash <(curl -sL https://raw.github.com/adrfer/bash-oh-my/master/uninstall)
 
 --
 Hey, looking for some bash best practices? Check [bash-best-practices](https://github.com/adrfer/bash-best-practices).
