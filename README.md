@@ -24,4 +24,6 @@ Open a terminal and run:
     bash <(curl -sL https://raw.github.com/adrfer/bash-oh-my/master/uninstall.sh)
 
 --
-Hey, looking for a git profile? Look no further than the [git-oh-my](https://github.com/adrfer/git-oh-my) repo.
+Hey, looking for some bash best practices? Check [bash-best-practices](https://github.com/adrfer/bash-best-practices).
+
+Interested in tuning your git profile? Look no further than the [git-oh-my](https://github.com/adrfer/git-oh-my) repo.
