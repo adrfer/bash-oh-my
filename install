@@ -21,7 +21,7 @@ if ! command -v 'git' >/dev/null 2>&1; then
     exit 0
   fi
 
-  if ! command -v 'xcode-select' &>/dev/null; then
+  if ! command -v 'xcode-select' >/dev/null 2>&1; then
     echo 'Ooops, Xcode not found. '
     read -r -p 'Install it (y/n [n])? '
 
@@ -30,7 +30,7 @@ if ! command -v 'git' >/dev/null 2>&1; then
       exit 0
     fi
 
-    if ! 'xcode-select' --install &>/dev/null; then
+    if ! 'xcode-select' --install >/dev/null 2>&1; then
       exit 1
     fi
   fi
