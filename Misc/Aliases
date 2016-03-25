@@ -26,3 +26,5 @@ alias grep="grep --color=auto"
 alias tail="tail -f"
 
 alias quit="exit"
+
+alias show-swift-version="xcrun swift -version"
