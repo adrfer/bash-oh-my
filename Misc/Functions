@@ -75,3 +75,12 @@ terminal-resize-to() {
 
   printf "\e[8;${height};${width}t"
 }
+
+terminal-resize-to-default-mode() {
+  [[ "${#}" = 0 ]] || {
+    echo 'Usage: terminal-resize-to-default-mode'
+    return 1
+  }
+
+  terminal-resize-to 24 80
+}
