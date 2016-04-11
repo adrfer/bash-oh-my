@@ -58,3 +58,20 @@ exists() {
 
   [[ -x $(command -v "${1}" 2>/dev/null) ]]
 }
+
+# XTerm Control Sequences
+# From http://invisible-island.net/xterm/ctlseqs/ctlseqs.html
+# Search for "CSI Ps ; Ps ; Ps t" or "window manipulation"
+
+# Resize window to specific height x width
+terminal-resize-to() {
+  height="${1}"
+  width="${2}"
+
+  [[ "${height}" =~ ^[0-9]+$ && "${width}" =~ ^[0-9]+$ ]] || {
+    echo 'Usage: terminal-resize-to [HEIGHT] [WIDTH]'
+    return 1
+  }
+
+  printf "\e[8;${height};${width}t"
+}
