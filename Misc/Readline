@@ -7,16 +7,16 @@
 #
 # Use C-x C-r to re-read ~/.inputrc for changes to take place.
 
-# Perform filename matching and completion in a case-insensitive fashion
+# Perform file name matching and completion in a case-insensitive fashion
 set completion-ignore-case on
 
-# List filename matching and completion after pressing tab just once
+# List file name matching and completion after pressing tab just once
 set show-all-if-ambiguous on
 
-# Treat hyphens and underscores as equivalent when performing filename matching and completion
+# Treat hyphens and underscores as equivalent when performing file name matching and completion
 set completion-map-case on
 
-# Replace common prefixes with an ellipsis when displaying possible filename matching and completion
+# Replace common prefixes with an ellipsis when displaying possible file name matching and completion
 set completion-prefix-display-length 2
 
 # Append a trailing slash when autocompleting symlinks to directories
