@@ -85,6 +85,16 @@ terminal-resize-to-default-mode() {
   terminal-resize-to 24 80
 }
 
+terminal-resize-to-quake-mode() {
+  [[ "${#}" = 0 ]] || {
+    echo 'Usage: terminal-resize-to-quake-mode'
+    return 1
+  }
+
+  terminal-go-top-left-corner
+  terminal-resize-to 24 0
+}
+
 # Minimize window for a few seconds, then restore it
 terminal-go-away-for() {
   seconds="${1}"
