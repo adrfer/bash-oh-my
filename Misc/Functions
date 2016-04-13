@@ -1,3 +1,4 @@
+# Clone files and/or directories
 clone() {
   [[ "${#}" = 1 ]] || {
     echo 'Usage: clone WHATEVER'
@@ -7,6 +8,7 @@ clone() {
   cp -rf ${1%/}{," copy $(date +%s)"}
 }
 
+# Jump to a directory, create it if it doesn't exist
 jump() {
   [[ "${#}" = 1 ]] || {
     echo 'Usage: jump PATH'
@@ -17,7 +19,7 @@ jump() {
   cd "${1}"
 }
 
-
+# Show all directories included in the PATH
 path() {
   [[ "${#}" = 0 ]] || {
     echo 'Usage: path'
@@ -27,6 +29,7 @@ path() {
   echo -e "${PATH//:/\\n}"
 }
 
+# Navigate directories upwards easily
 up() {
   level="${1}"
   [[ -z "${level}" ]] && level=1
@@ -41,6 +44,7 @@ up() {
   done
 }
 
+# Show current IP address
 ip() {
   [[ "${#}" = 0 ]] || {
     echo 'Usage: ip'
@@ -50,6 +54,7 @@ ip() {
   curl -s checkip.dyndns.org | grep -Eo '[0-9\.]+'
 }
 
+# Check if a command exists
 exists() {
   [[ "${#}" = 1 ]] || {
     echo 'Usage: exist'
