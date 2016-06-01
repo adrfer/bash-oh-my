@@ -3,21 +3,19 @@ Simple yet quirky bash profile, pure badassery.
 
 Code tested in `GNU bash 3.2.57`.
 
-## Usage
-
-### Install
+## Install
 
 To install, open a terminal and run:
 
     bash <(curl -sL https://raw.github.com/adrfer/bash-oh-my/master/install) && . ~/.bash_profile
 
-### Update
+## Update
 
 Open a terminal and run:
 
     bash <(curl -sL https://raw.github.com/adrfer/bash-oh-my/master/update)
 
-### Uninstall
+## Uninstall
 
 Open a terminal and run:
 
