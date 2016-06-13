@@ -22,6 +22,6 @@ Open a terminal and run:
     bash <(curl -sL https://raw.github.com/adrfer/bash-oh-my/master/uninstall)
 
 --
-Hey, looking for some bash best practices? Check the [bash-2c](https://github.com/adrfer/bash-2c) repo.
+Hey, looking for some bash best practices? Check out [bash-2c](https://github.com/adrfer/bash-2c).
 
-Interested in tuning your git profile? Look no further than the [git-oh-my](https://github.com/adrfer/git-oh-my).
+Interested in tuning your git profile? Take a look at [git-oh-my](https://github.com/adrfer/git-oh-my).
