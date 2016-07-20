@@ -111,3 +111,15 @@ terminal-go-to-top-left-corner() {
 
   printf '\e[3;0;0t'
 }
+
+# Move window to the top-left corner of the monitor
+terminal-take-left-size() {
+  [[ "${#}" = 0 ]] || {
+    echo 'Usage: terminal-take-left-size'
+    return 1
+  }
+  
+  terminal-go-to-top-left-corner
+  // Note: Could have used `tput cols' to keep the width
+  terminal-resize-to 0 80
+}
