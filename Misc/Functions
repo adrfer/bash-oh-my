@@ -103,9 +103,9 @@ terminal-go-away-for() {
 }
 
 # Move window to the top-left corner of the monitor
-terminal-go-top-left-corner() {
+terminal-go-to-top-left-corner() {
   [[ "${#}" = 0 ]] || {
-    echo 'Usage: terminal-go-top-left-corner'
+    echo 'Usage: terminal-go-to-top-left-corner'
     return 1
   }
 
