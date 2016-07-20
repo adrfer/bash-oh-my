@@ -120,6 +120,6 @@ terminal-take-left-size() {
   }
   
   terminal-go-to-top-left-corner
-  // Note: Could have used `tput cols' to keep the width
+  # Note: Could have used `tput cols' to keep the width
   terminal-resize-to 0 80
 }
