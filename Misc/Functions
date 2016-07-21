@@ -15,7 +15,7 @@ jump() {
     return 1
   }
 
-  [[ -n "${1}" ]] && mkdir -p "${1}"
+  [[ -n "${1}" ]] && mkdir -p "${1}" && echo "created dir ${1}"
   cd "${1}"
 }
 
