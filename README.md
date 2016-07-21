@@ -13,7 +13,7 @@ To install, open a terminal and run:
 
 Open a terminal and run:
 
-    bash <(curl -sL https://raw.github.com/adrfer/bash-oh-my/master/update)
+    bash <(curl -sL https://raw.github.com/adrfer/bash-oh-my/master/update) && . ~/.bash_profile
 
 ## Uninstall
 
