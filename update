@@ -62,6 +62,13 @@ if [[ ! -d "${local_repo}" ]]; then
     echo 'Ooops, there was an error, try again.'
     exit 1
   fi
+  
+else
+  # Backup local repo
+  
+  echo -n "Backing up ${local_repo}..."
+  cp -rf "${local_repo%/}"{," copy $(date +%s)"}
+  echo ' done.'
 fi
 
 # Update local repo
