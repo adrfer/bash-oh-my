@@ -52,8 +52,6 @@ if [[ ! -d "${local_repo}" ]]; then
     exit 0
   fi
 
-  # Clone remote repo
-
   echo -n "Cloning repo into ${local_repo}..."
 
   if git clone --quiet "${remote_repo}" "${local_repo}" >/dev/null 2>&1; then
@@ -64,8 +62,6 @@ if [[ ! -d "${local_repo}" ]]; then
   fi
   
 else
-  # Backup local repo
-  
   echo -n "Backing up ${local_repo}..."
   cp -rf "${local_repo%/}"{," copy $(date +%s)"}
   echo ' done.'
