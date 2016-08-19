@@ -1,7 +1,7 @@
 # Bash Oh My
 Simple yet quirky bash profile, pure badassery.
 
-Code tested in `GNU bash 3.2.57`.
+Tested in `GNU bash 3.2.57`.
 
 ## Install
 
