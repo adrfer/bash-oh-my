@@ -11,3 +11,8 @@ export EDITOR='vim'
 export PAGER='less'
 export HISTCONTROL='ignoreboth:erasedups'
 export HISTIGNORE='exit:history:man *:help *:info *:* --help'
+
+# See https://github.com/rbenv/rbenv
+# if command -v 'rbenv' >/dev/null 2>&1; then
+#   eval "$(rbenv init -)"
+# fi
