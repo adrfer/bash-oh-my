@@ -20,3 +20,6 @@ shopt -s histappend
 
 # Puts the command to be executed after a substitution on command line as if one had typed it
 shopt -s histverify
+
+# Puts a failed history substitution back on the command line for re-editing
+shopt -s histreedit
