@@ -17,3 +17,6 @@ shopt -s checkwinsize
 
 # Append the history list to the file named by the value of the HISTFILE when the shell exits
 shopt -s histappend
+
+# Puts the command to be executed after a substitution on command line as if one had typed it
+shopt -s histverify
