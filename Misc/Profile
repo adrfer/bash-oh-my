@@ -29,7 +29,7 @@ export LESS_TERMCAP_us=$'\E[01;32m'         # begin underline
 # !!: Refer to the previous/last command (e.g. sudo !! or just !!)
 # !n: Refer to command line "n"
 # !-n: Refer to the command "n" lines back (note: !-1 is equivalent to !!)
-# !string: Refer to themost recent command starting with "string" (e.g. re-run the last cd, !cd)
+# !string: Refer to the most recent command starting with "string" (e.g. re-run the last cd, !cd)
 # !?string?: Refer to the most recent command containing with "string" (note: the trailing ? is optional)
 # ^string1^string2^: Execute the last command, replacing "string1" with "string2" (e.g. cat /etc/hosst and ^hosst^hosts^)
 # /string or Ctrl-r: Search history backward for a command matching "string"
