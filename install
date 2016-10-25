@@ -1,34 +1,28 @@
 #!/usr/bin/env bash
 
 # Check if git is available
-
 if ! command -v 'git' >/dev/null 2>&1; then
   echo 'Ooops, git not found. '
   echo 'Go to https://git-scm.com for more info.'
   exit 1
 fi
 
-# Define repo variables
-
-remote_repo='https://github.com/adrfer/bash-oh-my.git'
+# Define repository variables
 local_repo="${HOME}/.bash-oh-my"
-
-# Define formatting variables
+remote_repo='https://github.com/adrfer/bash-oh-my.git'
 
 bold="$(tput bold)"
 normal="$(tput sgr0)"
 
-# Check local repo
-
+# Backup existing repository
 if [[ -d "${local_repo}" ]]; then
   echo -n "Backing up ${bold}${local_repo}${normal}..."
   mv -f "${local_repo%/}"{," copy $(date +%s)"}
   echo ' done.'
 fi
 
-# Clone the remote repo into the local repo
-
-echo -n "Cloning repo into ${bold}${local_repo}${normal}..."
+# Download remote files
+echo -n "Downloading some bash badassery..."
 
 if git clone --quiet "${remote_repo}" "${local_repo}" >/dev/null 2>&1; then
   echo ' done.'
@@ -38,13 +32,13 @@ else
 fi
 
 # Define profile variables
-
 remote_profile="${local_repo}/Misc/Profile"
 local_profile="${HOME}/.bash_profile"
 
-# Link local profile
-
+# Setup files
+echo -n "Now setting up..."
 ln -sf "${remote_profile}" "${local_profile}"
+echo ' done.'
 
 echo 'Install successful, enjoy!'
 exit 0
