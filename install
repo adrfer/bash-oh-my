@@ -29,8 +29,8 @@ else
 fi
 
 # Define profile variables
-remote_profile="${local_repo}/Misc/Profile"
 local_profile="${HOME}/.bash_profile"
+remote_profile="${local_repo}/Misc/Profile"
 
 # Setup files
 echo -n "Now setting up..."
