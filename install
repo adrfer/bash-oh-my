@@ -11,12 +11,9 @@ fi
 local_repo="${HOME}/.bash-oh-my"
 remote_repo='https://github.com/adrfer/bash-oh-my.git'
 
-bold="$(tput bold)"
-normal="$(tput sgr0)"
-
 # Backup existing repository
 if [[ -d "${local_repo}" ]]; then
-  echo -n "Backing up ${bold}${local_repo}${normal}..."
+  echo -n "Backing up ${local_repo}..."
   mv -f "${local_repo%/}"{," copy $(date +%s)"}
   echo ' done.'
 fi
