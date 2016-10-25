@@ -37,5 +37,5 @@ echo -n "Now setting up..."
 ln -sf "${remote_profile}" "${local_profile}"
 echo ' done.'
 
-echo 'Install successful, enjoy!'
+echo 'All good, enjoy!'
 exit 0
