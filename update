@@ -1,25 +1,21 @@
 #!/usr/bin/env bash
 
 # Check if git is available
-
 if ! command -v 'git' >/dev/null 2>&1; then
   echo 'Ooops, git not found. '
   echo 'Go to https://git-scm.com for more info.'
   exit 1
 fi
 
-# Define repo variables
-
-remote_repo='https://github.com/adrfer/bash-oh-my.git'
+# Define repository variables
 local_repo="${HOME}/.bash-oh-my"
+remote_repo='https://github.com/adrfer/bash-oh-my.git'
 
 # Define formatting variables
-
 bold="$(tput bold)"
 normal="$(tput sgr0)"
 
 # Check local repo
-
 if [[ ! -d "${local_repo}" ]]; then
   echo -n "Ooops, local repo ${bold}${local_repo}${normal} not found. "
   read -r -p 'Clone it (y/n [n])? '
@@ -37,7 +33,7 @@ if [[ ! -d "${local_repo}" ]]; then
     echo 'Ooops, there was an error, try again.'
     exit 1
   fi
-  
+
 else
   echo -n "Backing up ${bold}${local_repo}${normal}..."
   cp -rf "${local_repo%/}"{," copy $(date +%s)"}
@@ -45,9 +41,7 @@ else
 fi
 
 # Update local repo
-
 cd "${local_repo}"
-
 echo -n "Updating local repo ${bold}${local_repo}${normal}..."
 
 if git checkout --quiet . >/dev/null 2>&1 && git pull --quiet origin master >/dev/null 2>&1; then
@@ -58,12 +52,9 @@ else
   exit 1
 fi
 
-# Define profile variables
-
+# Setup profile
 local_profile="${HOME}/.bash_profile"
 remote_profile="${local_repo}/Misc/Profile"
-
-# Link local profile
 
 ln -sf "${remote_profile}" "${local_profile}"
 
