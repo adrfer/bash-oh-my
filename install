@@ -11,7 +11,7 @@ fi
 local_repo="${HOME}/.bash-oh-my"
 remote_repo='https://github.com/adrfer/bash-oh-my.git'
 
-# Backup existing repository
+# Backup local files, if any
 if [[ -d "${local_repo}" ]]; then
   echo -n "Backing up ${local_repo}..."
   mv -f "${local_repo%/}"{," copy $(date +%s)"}
@@ -28,11 +28,10 @@ else
   exit 1
 fi
 
-# Define profile variables
+# Setup local files
 local_profile="${HOME}/.bash_profile"
 remote_profile="${local_repo}/Misc/Profile"
 
-# Setup files
 echo -n "Now setting up..."
 ln -sf "${remote_profile}" "${local_profile}"
 echo ' done.'
