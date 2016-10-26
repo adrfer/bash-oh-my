@@ -11,34 +11,26 @@ fi
 local_repo="${HOME}/.bash-oh-my"
 remote_repo='https://github.com/adrfer/bash-oh-my.git'
 
-# Check local repo
-if [[ ! -d "${local_repo}" ]]; then
-  echo -n "Ooops, local repo ${local_repo} not found. "
-  read -r -p 'Clone it (y/n [n])? '
-
-  if [[ ! "${REPLY}" =~ ^[Yy]$ ]]; then
-    echo 'Ok then, nothing much to see here.'
-    exit 0
-  fi
-
-  echo -n "Cloning repo into ${local_repo}..."
-
-  if git clone --quiet "${remote_repo}" "${local_repo}" >/dev/null 2>&1; then
-    echo ' done.'
-  else
-    echo 'Ooops, there was an error, try again.'
-    exit 1
-  fi
-
-else
+# Backup local files, if any
+if [[ -d "${local_repo}" ]]; then
   echo -n "Backing up ${local_repo}..."
-  cp -rf "${local_repo%/}"{," copy $(date +%s)"}
+  mv -f "${local_repo%/}"{," copy $(date +%s)"}
   echo ' done.'
 fi
 
-# Update local repo
+# Download remote files
+echo -n "Downloading some bash badassery..."
+
+if git clone --quiet "${remote_repo}" "${local_repo}" >/dev/null 2>&1; then
+  echo ' done.'
+else
+  echo 'Ooops, there was an error, try again.'
+  exit 1
+fi
+
+# Update local files
 cd "${local_repo}"
-echo -n "Updating local repo ${local_repo}..."
+echo -n "Updating..."
 
 if git checkout --quiet . >/dev/null 2>&1 && git pull --quiet origin master >/dev/null 2>&1; then
   echo ' done.'
@@ -48,11 +40,13 @@ else
   exit 1
 fi
 
-# Setup profile
+# Setup local files
 local_profile="${HOME}/.bash_profile"
 remote_profile="${local_repo}/Misc/Profile"
 
+echo -n "Now setting up..."
 ln -sf "${remote_profile}" "${local_profile}"
+echo ' done.'
 
-echo 'Update successful, enjoy!'
+echo 'All good, enjoy!'
 exit 0
