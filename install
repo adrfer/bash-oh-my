@@ -30,7 +30,7 @@ else
 fi
 
 # Setup existing and new files
-echo -n 'Now setting up...'
+echo -n 'Setting up your profile...'
 ln -sf "${local_repo}/Misc/Profile" "${HOME}/.bash_profile"
 echo ' done.'
 
