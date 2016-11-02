@@ -11,29 +11,27 @@ fi
 # Define repository variables
 local_repo="${HOME}/.bash-oh-my"
 
-# Remove local files, if any
+# Remove existing files, if any
+echo -n "Removing existing bash files..."
+
 if [[ -d "${local_repo}" ]]; then
-  echo -n "Removing ${local_repo}..."
   rm -rf "${local_repo}"
-  echo ' done.'
 fi
 
-# Define profile variables
 local_profile="${HOME}/.bash_profile"
 local_readline="${HOME}/.inputrc"
 
-# Remove symlinks, if any
 files=( "${local_profile}" "${local_readline}" )
 
 for file in "${files[@]}"; do
   if [[ -L "${file}" ]]; then
-    echo -n "Removing ${file}..."
     rm -f "${file}"
-    echo ' done.'
   fi
 done
 
-# Backup local files, if any
+echo ' done.'
+
+# Backup existing files, if any
 read -r -p "Check for ${local_repo} backups? (y/n [n])? "
 
 if [[ ! "${REPLY}" =~ ^[Yy]$ ]]; then
