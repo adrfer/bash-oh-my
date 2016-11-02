@@ -11,14 +11,16 @@ fi
 local_repo="${HOME}/.bash-oh-my"
 remote_repo='https://github.com/adrfer/bash-oh-my.git'
 
-# Backup local files, if any
+# Backup existing files, if any
+echo -n "Backing up exising bash files..."
+
 if [[ -d "${local_repo}" ]]; then
-  echo -n "Backing up ${local_repo}..."
   mv -f "${local_repo%/}"{," copy $(date +%s)"}
-  echo ' done.'
 fi
 
-# Download remote files
+echo ' done.'
+
+# Download new files
 echo -n "Downloading some bash badassery..."
 
 if git clone --quiet "${remote_repo}" "${local_repo}" >/dev/null 2>&1; then
@@ -28,7 +30,7 @@ else
   exit 1
 fi
 
-# Setup local files
+# Setup existing and new files
 echo -n "Now setting up..."
 ln -sf "${local_repo}/Misc/Profile" "${HOME}/.bash_profile"
 echo ' done.'
