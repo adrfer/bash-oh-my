@@ -11,37 +11,31 @@ fi
 local_repo="${HOME}/.bash-oh-my"
 remote_repo='https://github.com/adrfer/bash-oh-my.git'
 
-# Backup local files, if any
+# Update existing files or download new ones
 if [[ -d "${local_repo}" ]]; then
-  echo -n "Backing up ${local_repo}..."
-  mv -f "${local_repo%/}"{," copy $(date +%s)"}
-  echo ' done.'
-fi
+  cd "${local_repo}"
+  echo -n "Updating some bash badassery..."
 
-# Download remote files
-echo -n "Downloading some bash badassery..."
-
-if git clone --quiet "${remote_repo}" "${local_repo}" >/dev/null 2>&1; then
-  echo ' done.'
+  if git checkout --quiet . >/dev/null 2>&1 && git pull --quiet origin master >/dev/null 2>&1; then
+    echo ' done.'
+    cd - >/dev/null 2>&1
+  else
+    echo 'Ooops, there was an error, try again.'
+    exit 1
+  fi
 else
-  echo 'Ooops, there was an error, try again.'
-  exit 1
+  echo -n "Downloading some bash badassery..."
+
+  if git clone --quiet "${remote_repo}" "${local_repo}" >/dev/null 2>&1; then
+    echo ' done.'
+  else
+    echo 'Ooops, there was an error, try again.'
+    exit 1
+  fi
 fi
 
-# Update local files
-cd "${local_repo}"
-echo -n "Updating..."
-
-if git checkout --quiet . >/dev/null 2>&1 && git pull --quiet origin master >/dev/null 2>&1; then
-  echo ' done.'
-  cd - >/dev/null 2>&1
-else
-  echo 'Ooops, there was an error, try again.'
-  exit 1
-fi
-
-# Setup local files
-echo -n "Now setting up..."
+# Setup existing and new files
+echo -n "Now setting up your profile..."
 ln -sf "${local_repo}/Misc/Profile" "${HOME}/.bash_profile"
 echo ' done.'
 
