@@ -56,6 +56,11 @@ ip() {
 
 # Redirect the output of a command to a black hole
 nullify() {
+  [[ "${#}" = 0 ]] || {
+    echo 'Usage: nullify COMMAND'
+    return 1
+  }
+
   "${@}" >/dev/null 2>&1
 }
 
