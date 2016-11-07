@@ -91,9 +91,9 @@ terminal-resize-to() {
   printf "\e[8;${height};${width}t"
 }
 
-terminal-resize-to-default-mode() {
+terminal-resize-to-default() {
   [[ "${#}" = 0 ]] || {
-    echo 'Usage: terminal-resize-to-default-mode'
+    echo 'Usage: terminal-resize-to-default'
     return 1
   }
 
