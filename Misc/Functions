@@ -123,9 +123,9 @@ terminal-go-to-top-left-corner() {
 }
 
 # Take the left size of the monitor
-terminal-take-left-size() {
+terminal-snap-to-the-left() {
   [[ "${#}" = 0 ]] || {
-    echo 'Usage: terminal-take-left-size'
+    echo 'Usage: terminal-snap-to-the-left'
     return 1
   }
 
