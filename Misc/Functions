@@ -8,7 +8,7 @@ clone() {
   cp -rf ${1%/}{," copy $(date +%s)"}
 }
 
-# Jump to a directory, create it if it doesn't exist
+# Jump to an existing directory or create it
 jump() {
   [[ "${#}" = 1 ]] || {
     echo 'Usage: jump PATH'
@@ -19,7 +19,7 @@ jump() {
   cd "${1}"
 }
 
-# Show all directories included in the PATH
+# Show all directories included in PATH
 path() {
   [[ "${#}" = 0 ]] || {
     echo 'Usage: path'
