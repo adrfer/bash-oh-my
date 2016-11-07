@@ -5,19 +5,15 @@ Tested on `GNU bash 3.2.57` and `Git 2.8.4`.
 
 ## Install
 
-To install, open a terminal and run:
+Open a terminal and run:
 
     bash <(curl -sL https://raw.github.com/adrfer/bash-oh-my/master/install) && . ~/.bash_profile
 
 ## Update
 
-Open a terminal and run:
-
     bash <(curl -sL https://raw.github.com/adrfer/bash-oh-my/master/update) && . ~/.bash_profile
 
 ## Uninstall
-
-Open a terminal and run:
 
     bash <(curl -sL https://raw.github.com/adrfer/bash-oh-my/master/uninstall)
 
