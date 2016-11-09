@@ -29,5 +29,4 @@ alias quit="exit"
 
 alias reload=". ~/.bash_profile && echo Bash profile reloaded."
 
-alias show-swift-version="xcrun swift -version"
 alias show-swift-path="xcrun --find swift"
