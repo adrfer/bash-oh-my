@@ -54,8 +54,8 @@ ip() {
   curl -s checkip.dyndns.org | grep -Eo '[0-9\.]+'
 }
 
-# Redirect the output of a command to a black hole
-nullify() {
+# Silence commands by voiding their outputs (stdout and stderr)
+silence() {
   [[ "${#}" = 0 ]] || {
     echo 'Usage: nullify COMMAND'
     return 1
