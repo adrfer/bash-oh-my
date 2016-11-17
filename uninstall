@@ -52,7 +52,7 @@ if [[ -n "${local_repo_backup}" ]]; then
     echo ' done.'
   fi
 else
-  echo 'No backups found.'
+  echo 'Oops, no backups found.'
 fi
 
 if [[ ! -L "${local_profile}" ]]; then
