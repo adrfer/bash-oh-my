@@ -1,9 +1,8 @@
 #!/usr/bin/env bash
 
 # Check if git is available
-if ! command -v 'git' >/dev/null 2>&1; then
+if ! command -v 'git' >/dev/null; then
   echo 'Ooops, git not found.'
-  echo 'Go to https://git-scm.com for more info.'
   exit 1
 fi
 
@@ -21,11 +20,11 @@ fi
 # Download new files
 echo -n 'Downloading some bash badassery...'
 
-if git clone --quiet "${remote_repo}" "${local_repo}" >/dev/null 2>&1; then
+if git clone "${remote_repo}" "${local_repo}" >/dev/null 2>&1; then
   echo ' done.'
 else
   echo
-  echo 'Ooops, there was an error, try again.'
+  echo "Ooops, unable to access ${remote_repo}, try again."
   exit 1
 fi
 
