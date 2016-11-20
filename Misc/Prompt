@@ -1,9 +1,7 @@
-git_prompt='git-prompt.sh'
-git_completion='git-completion.bash'
 git_location=$('xcode-select' --print-path)'/usr/share/git-core'
 
-. "${git_location}/${git_prompt}"
-. "${git_location}/${git_completion}"
+. "${git_location}/git-prompt.sh"
+. "${git_location}/git-completion.bash"
 
 export GIT_PS1_SHOWDIRTYSTATE=true
 export GIT_PS1_SHOWSTASHSTATE=true
