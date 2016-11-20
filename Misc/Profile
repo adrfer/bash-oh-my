@@ -43,4 +43,4 @@ export LESS_TERMCAP_ue=$'\E[0m'           # stop underline
 # :* : Get all arguments of a command in history (e.g. ls !cp:* or ls !!:*)
 
 export HISTCONTROL='ignoreboth:erasedups'
-export HISTIGNORE='exit:history:man *:help *:info *:* --help'
+export HISTIGNORE='exit:history:clear:man *:help *:info *:* --help'
