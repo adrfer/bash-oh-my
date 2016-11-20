@@ -24,23 +24,5 @@ export LESS_TERMCAP_se=$'\E[0m'           # stop standout
 export LESS_TERMCAP_us=$'\E[01;32m'       # startunderline
 export LESS_TERMCAP_ue=$'\E[0m'           # stop underline
 
-# Event Designators
-#
-# !!: Refer to the previous/last command (e.g. sudo !! or just !!)
-# !n: Refer to command line "n"
-# !-n: Refer to the command "n" lines back (note: !-1 is equivalent to !!)
-# !string: Refer to the most recent command starting with "string" (e.g. re-run the last cd, !cd)
-# !?string?: Refer to the most recent command containing with "string" (note: the trailing ? is optional)
-# ^string1^string2^: Execute the last command, replacing "string1" with "string2" (e.g. cat /etc/hosst and ^hosst^hosts^)
-# /string or Ctrl-r: Search history backward for a command matching "string"
-# ?string or Ctrl-s: Search history forward for a command matching "string"
-
-# Word Designators
-#
-# :^ : Get the 1st argument of a command in history (e.g. ls !cp:^ or ls !!:^)
-# :$ : Get the last argument of a command in history (e.g. ls !cp:$ or ls !!:$)
-# :n : Get the nth argument of a command in history (e.g. ls !cp:2 or ls !!:2)
-# :* : Get all arguments of a command in history (e.g. ls !cp:* or ls !!:*)
-
 export HISTCONTROL='ignoreboth:erasedups'
 export HISTIGNORE='exit:history:clear:man *:help *:info *:* --help'
