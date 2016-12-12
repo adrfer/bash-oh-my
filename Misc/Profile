@@ -26,3 +26,10 @@ export LESS_TERMCAP_ue=$'\E[0m'           # stop underline
 
 export HISTCONTROL='ignoreboth:erasedups'
 export HISTIGNORE='exit:history:clear:man *:help *:info *:* --help'
+
+# Source customizations, if any
+custom_file="${HOME}/.bash-oh-my.local"
+
+if [[ -f "${custom_file}" ]]; then
+  . "${custom_file}"
+fi
