@@ -27,5 +27,3 @@ To further customize your bash setup, put whatever you need at the `~/.bash-oh-m
 Hey, looking for some bash best practices? Check out [bash-2c](https://github.com/adrfer/bash-2c).
 
 Interested in tuning your git profile? Take a look at [git-oh-my](https://github.com/adrfer/git-oh-my).
-
-What about transforming you machine into an awesome development one? Look no further than [mumm-ra](https://github.com/adrfer/mumm-ra).
