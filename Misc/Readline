@@ -25,3 +25,6 @@ set mark-symlinked-directories on
 # Enable typing a command and use up/down arrow keys to autocomplete from commands in history
 "\e[A": history-search-backward
 "\e[B": history-search-forward
+
+# Kill whole line regardless of the cursor position
+"\C-d": kill-whole-line
