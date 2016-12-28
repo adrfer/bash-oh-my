@@ -1,15 +1,15 @@
-# For more info about `shopt`, open a terminal and run this command:
+# For more info about shopt, open a terminal and run this command:
 #
 #   man 1 bash
 #   /^ *shopt \[
 
-# Correct minor spelling errors of a directory component in a `cd` command
+# Correct minor spelling errors of a directory component in a cd command
 shopt -s cdspell
 
 # Match filenames in a case-insensitive fashion when performing file name expansion
 shopt -s nocaseglob
 
-# Include file names beginning with a `.` in the results of their expansion
+# Include file names beginning with a . in the results of their expansion
 shopt -s dotglob
 
 # Check the window size after each command and updates the values of LINES and COLUMNS
