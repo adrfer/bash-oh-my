@@ -1,11 +1,9 @@
-# For more info about `readline`, open a terminal and run this command:
+# For more info about readline, open a terminal and run this command:
 #
 #   man 1 bash
 #   /^READLINE
 #
-# Readline is customized by putting commands in the ~/.inputrc.
-#
-# Use C-x C-r to re-read ~/.inputrc for changes to take place.
+# Use C-x C-r to reload ~/.inputrc for changes to take place
 
 # Perform file name matching and completion in a case-insensitive fashion
 set completion-ignore-case on
