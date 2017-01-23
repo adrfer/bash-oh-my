@@ -1,2 +1,12 @@
 
 #!/usr/bin/env bash
+
+# Show local weather
+weather() {
+  [[ "${#}" = 1 ]] || {
+    echo 'Usage: weather'
+    return 1
+  }
+  
+  curl http://wttr.in
+}
