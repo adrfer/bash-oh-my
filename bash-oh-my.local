@@ -3,7 +3,7 @@
 
 # Show local weather
 weather() {
-  [[ "${#}" = 1 ]] || {
+  [[ "${#}" = 0 ]] || {
     echo 'Usage: weather'
     return 1
   }
