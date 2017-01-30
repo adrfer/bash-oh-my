@@ -1,5 +1,11 @@
 #!/usr/bin/env bash
 
+# For more info about bash, open a terminal and run:
+#
+#    man bash
+# 
+# /!\ Make your own customizations in here
+
 # Show local weather
 weather() {
   [[ "${#}" = 0 ]] || {
