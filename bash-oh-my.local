@@ -5,13 +5,3 @@
 #    man bash
 # 
 # /!\ Make your own customizations in here
-
-# Show local weather
-weather() {
-  [[ "${#}" = 0 ]] || {
-    echo 'Usage: weather'
-    return 1
-  }
-  
-  curl http://wttr.in
-}
