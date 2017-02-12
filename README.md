@@ -21,7 +21,7 @@ Open a terminal and run:
 
 #### The `~/.bash-oh-my.local` file
 
-To further customize your bash setup, put whatever you need at the `~/.bash-oh-my.local` file.
+To further customize your bash setup, put whatever you need at the `~/.bash-oh-my.local` file. See example file within this repository.
 
 --
 Hey, looking for some bash best practices? Check out [bash-2c](https://github.com/adrfer/bash-2c).
