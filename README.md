@@ -1,7 +1,7 @@
 # Bash Oh My
 Simple yet quirky bash profile, pure badassery.
 
-Tested against `GNU bash 3.2.57` and `Git 2.10.1`.
+Tested against `GNU bash 3.2.57` and `Git 2.10.1`. Setup scripts should pass `shellcheck 0.4.4`.
 
 ## Install
 
