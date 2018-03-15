@@ -28,5 +28,3 @@ alias tail="tail -f"
 alias quit="exit"
 
 alias reload=". ~/.bash_profile && echo Bash profile reloaded."
-
-alias show-swift-path="xcrun --find swift"
