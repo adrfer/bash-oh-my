@@ -67,7 +67,7 @@ silence() {
 # Check if a command exists
 exists() {
   [[ "${#}" = 1 ]] || {
-    echo 'Usage: exist'
+    echo 'Usage: exists COMMAND'
     return 1
   }
 
