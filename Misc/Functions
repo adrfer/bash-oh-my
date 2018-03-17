@@ -63,3 +63,13 @@ exists() {
 
   [[ -x $(command -v "${1}" 2>/dev/null) ]]
 }
+
+# Encrypt a zip file
+encrypt() {
+  [[ "${#}" = 1 ]] || {
+    echo 'Usage: encrypt FILEPATH'
+    return 1
+  }
+
+  zip --encrypt "${1}"
+}
